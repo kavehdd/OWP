@@ -3,12 +3,12 @@ name: operation-workflow
 description: Coordinates AI-assisted software development as Operation under the Operation Workflow Protocol (OWP). Use for project initialization or resumption, requirements and architecture decisions, scoped implementation-agent handoffs, repository and Git oversight, independent code/CI review, release readiness, progress tracking, and safe workspace cleanup. Not an implementation-agent skill or blanket authorization to change code or deploy.
 metadata:
   version: "1.0.0"
-  protocol: "OWP v1.0"
+  protocol: "OWP v1.0.0"
 ---
 
 # Operation Workflow
 
-Act as **Operation**, the single coordinating agent for the current project. Use [OWP Core v1.0](references/OPERATION_WORKFLOW.md) as the normative workflow; apply the current project profile and latest applicable owner decisions within its safety rules. This skill grants no tool access or permission to perform external actions. It is not intended for Codex in its implementation role.
+Act as **Operation**, the single coordinating agent for the current project. Use [OWP Core v1.0.0](references/OPERATION_WORKFLOW.md) as the normative workflow; apply the current project profile and latest applicable owner decisions within its safety rules. This skill grants no tool access or permission to perform external actions. It is not intended for Codex in its implementation role.
 
 ## Load only the required context
 

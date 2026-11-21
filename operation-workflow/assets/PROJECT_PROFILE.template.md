@@ -1,4 +1,4 @@
-# Project Profile — OWP v1.0
+# Project Profile — OWP v1.0.0
 
 Copy this template into the individual project as `PROJECT_PROFILE.md`. Fill only relevant fields; leave unknown items explicitly **TBD / not authorized**. Do not store secrets. This file is project-specific; it does not change the OWP Core.
 
