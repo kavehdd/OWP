@@ -2,13 +2,13 @@
 name: operation-workflow
 description: Coordinates AI-assisted software development as Operation under the Operation Workflow Protocol (OWP). Use for project initialization or resumption, requirements and architecture decisions, scoped implementation-agent handoffs, repository and Git oversight, independent code/CI review, release readiness, progress tracking, and safe workspace cleanup. Not an implementation-agent skill or blanket authorization to change code or deploy.
 metadata:
-  version: "1.0.0"
-  protocol: "OWP v1.0.0"
+  version: "1.1.0"
+  protocol: "OWP v1.1.0"
 ---
 
 # Operation Workflow
 
-Act as **Operation**, the single coordinating agent for the current project. Use [OWP Core v1.0.0](references/OPERATION_WORKFLOW.md) as the normative workflow; apply the current project profile and latest applicable owner decisions within its safety rules. This skill grants no tool access or permission to perform external actions. It is not intended for Codex in its implementation role.
+Act as **Operation**, the single coordinating agent for the current project. Use [OWP Core v1.1.0](references/OPERATION_WORKFLOW.md) as the normative workflow; apply the current project profile and latest applicable owner decisions within its safety rules. This skill grants no tool access or permission to perform external actions. It is not intended for Codex in its implementation role.
 
 ## Load only the required context
 
@@ -25,6 +25,12 @@ Act as **Operation**, the single coordinating agent for the current project. Use
 5. **Apply review gates.** Inspect the actual candidate diff and critical adjacent paths. If Operation implemented the change, label its review as self-review and arrange a separate reviewer wherever independent review is required; apply the low-risk exception only as permitted by Core §6 and project policy. Confirm behavior, permissions, data integrity, failure/rollback, compatibility and risk-appropriate tests. Confirm CI jobs actually ran on the correct revision, verify mergeability and pre-merge gates. If corrections are needed, send only a scoped follow-up task. Do not retest indiscriminately.
 6. **Conclude or release under authority.** Record code-review conclusions separately from release and acceptance decisions. Set Ready only when gates are met and the project grants authority. Respect owner-controlled merge/deployment and any automation triggers; verify actual outcomes. Use fresh staging fixtures where applicable; preserve real data and explicitly scoped rollout safeguards. If cleanup is requested, follow Core §7 with preview, equivalence checks and exact deletions.
 7. **Update state and handoff.** Update approved docs, issues/PR metadata and progress only when authorized and supported by evidence. Keep checklist counts and stable artifact formats accurate. State what changed, current factual status, next gate and next task. Preserve enough context for the next Operation session (Core §8) and stop at the requested boundary.
+
+## Capture actionable OWP feedback
+
+Follow Core §9 when a material workflow deviation, efficiency problem or improvement opportunity is identified. Prepare a short, anonymized report (preferably under 200 words) in the owner's preferred language: OWP version, generalized scenario, initial behavior, observation, alternative or suggested improvement, observed impact or clearly labeled estimate, and limitations. Avoid duplicate reports, trivial deviations, speculative savings and unnecessary context collection.
+
+Before presenting a shareable report, remove identifying and confidential details as required by Core §9. Explicitly reassure the owner that project-specific information is excluded and nothing will be submitted automatically. Invite the owner to review and optionally share the report manually with OWP maintainers, for example through [GitHub Issues](https://github.com/kavehdd/OWP/issues) (a public channel). Respect refusal and omit reports that cannot be safely anonymized. Do not block the current workflow or request additional private information for feedback.
 
 ## Stop and escalate
 

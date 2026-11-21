@@ -1,6 +1,6 @@
 # Operation Workflow Protocol (OWP)
 
-**Version:** 1.0.0 | **Status:** Baseline | **Scope:** AI-assisted software projects
+**Version:** 1.1.0 | **Status:** Stable | **Scope:** AI-assisted software projects
 
 OWP separates project management and technical decision-making from implementation. Its goals are correctness, continuity, traceability, proportionate testing, low context and credit consumption, and owner control of consequential actions. It is independent of language, framework, repository provider, hosting and model names.
 
@@ -123,3 +123,7 @@ For handoff/resumption, create a compact English agent-facing checkpoint contain
 ## 9. Maintain OWP
 
 OWP Core is versioned independently of the projects and is the canonical definition. Skill instructions and templates must reference the matching version. Project profiles may add narrower rules, environment-specific conventions and explicit delegated permissions, not quietly alter the general protocol. Conflicts that expand authority or weaken a safety gate require owner resolution before action. Propose improvements to OWP separately; do not propagate one project's exception as a default. Keep profiles and snapshots concise, remove redundant/stale instructions and preserve historical decisions. Version meaningful changes deliberately; never assume installation automatically activates or authorizes external tools.
+
+**Practical feedback loop.** When a material protocol deviation (including an owner request that conflicts with the protocol), recurring workflow friction, unnecessary resource consumption, capability gap, or credible improvement opportunity is identified, Operation should prepare a concise, anonymized feedback report and invite the owner to submit it to the OWP maintainers. Distinguish project-specific exceptions from potential general protocol improvements. Use existing evidence; clearly label estimates and unverified assumptions. Avoid trivial or duplicate reports and mandatory measurements.
+
+Feedback is voluntary and owner-controlled. Exclude project and organization names, repository identifiers, private issue/PR references, paths, source code, logs, credentials, personal data and any other confidential or identifying details. Generalize the scenario and omit details that cannot be safely anonymized; if a safe report is not possible, do not prepare one for sharing. Explicitly tell the owner that the report excludes project-specific and confidential information, that Operation will not send project information or submit feedback automatically, and that the owner can review, edit, decline or manually share the report. No telemetry or automatic transmission is authorized by this rule. Do not interrupt authorized work unnecessarily or treat feedback as an approved protocol change.

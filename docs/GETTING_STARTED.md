@@ -1,13 +1,13 @@
-# راهنمای استفاده از Operation Workflow Protocol — نسخه 1.0.0
+# راهنمای استفاده از Operation Workflow Protocol — نسخه 1.1.0
 
-هدف OWP این است که در پروژه‌های نرم‌افزاری، **Operation** مسئول مدیریت، تحلیل و تصمیم‌گیری باشد و عامل توسعه (مثلاً Codex در VS Code) روی پیاده‌سازی و تست تمرکز کند. مالک انسانی همچنان اولویت‌ها، مجوزهای حساس و پذیرش نهایی را کنترل می‌کند.
+هدف OWP این است که در پروژه‌های نرم‌افزاری، **Operation** مسئول مدیریت، تحلیل و تصمیم‌گیری باشد و مسیر اجرای مستقیم، ترکیبی یا واگذارشده به عامل توسعه (مثلاً Codex در VS Code) را با توجه به قابلیت ابزار، هزینه، ریسک و کیفیت شواهد انتخاب کند. مالک انسانی همچنان اولویت‌ها، مجوزهای حساس و پذیرش نهایی را کنترل می‌کند.
 
 این بسته عمومی است؛ هیچ نام مخزن، مسیر کامپیوتر، شماره Issue یا PR، معماری یا مجوز اختصاصی یک پروژه در قواعد عمومی آن تثبیت نشده است. قواعد خاص پروژه‌های فعلی به قوت خود باقی هستند.
 
 ## ۱. محتویات و معماری بسته
 
 ```text
-OWP-v1.0/
+OWP-v1.1.0/
 ├── README_FA.md
 └── operation-workflow/
     ├── SKILL.md
@@ -23,7 +23,7 @@ OWP-v1.0/
 | دستورالعمل اجرایی انگلیسی برای Operation؛ مشخص می‌کند چه موقع کدام قواعد اجرا شوند. | `SKILL.md` | دوم: Operation Skill |
 | قالب انگلیسی مختصر برای ساخت نسخه اختصاصی هر پروژه. پس از تکمیل به `PROJECT_PROFILE.md` تغییر نام بده. | `PROJECT_PROFILE.template.md` | سوم: Project Profile |
 
-فایل Core در `references/` قرار دارد تا Skill به همان نسخه مرجع دسترسی داشته باشد. فایل جداگانه‌ای با متن تکراری از Core نگهداری نکن. Skill هم برای Operation است؛ برای Codex آن را به‌عنوان Skill اجرایی نصب نکن. Codex باید تسک انگلیسی محدودشده‌ای را که Operation آماده می‌کند دریافت کند. اگر در آینده Skill مخصوص عامل توسعه ساخته شد، باید مکمل OWP باشد، نه نسخه رقیب آن.
+فایل Core در `references/` قرار دارد تا Skill به همان نسخه مرجع دسترسی داشته باشد. فایل جداگانه‌ای با متن تکراری از Core نگهداری نکن. Skill هم برای Operation است؛ برای Codex آن را به‌عنوان Skill اجرایی نصب نکن. در صورت انتخاب مسیر واگذاری، Codex باید تسک انگلیسی محدودشده‌ای را که Operation آماده می‌کند دریافت کند. اگر در آینده Skill مخصوص عامل توسعه ساخته شد، باید مکمل OWP باشد، نه نسخه رقیب آن.
 
 ## ۲. روش پیشنهادی در ChatGPT Project
 
@@ -35,7 +35,7 @@ OWP-v1.0/
 
 ```text
 Act as Operation, the single coordinating agent for this project.
-Follow OWP v1.0.0 in OPERATION_WORKFLOW.md and the operating instructions in SKILL.md.
+Follow OWP v1.1.0 in OPERATION_WORKFLOW.md and the operating instructions in SKILL.md.
 Apply PROJECT_PROFILE.md, the latest approved project decisions, and applicable repository rules.
 Use Persian with the human owner and English for implementation-agent tasks, reports and handoffs unless the owner specifies otherwise.
 Keep project-specific rules and permissions separate from the general OWP. Do not assume authority for writes, commits, pushes, PR changes, merge, deployment or destructive cleanup. Preserve existing decisions; verify current facts from authoritative sources.
@@ -45,7 +45,7 @@ Keep project-specific rules and permissions separate from the general OWP. Do no
 5. برای شروع، پیام آماده زیر را بفرست. Operation باید وضعیت موجود را تشخیص دهد، نه اینکه از صفر کل Repository را مجدداً بخواند.
 
 ```text
-Initialize or resume this project under OWP v1.0.0 as Operation.
+Initialize or resume this project under OWP v1.1.0 as Operation.
 Read the Core, Skill, project profile and relevant existing project instructions.
 Recover the latest valid baseline, approved decisions, permissions and next open task.
 Identify missing or conflicting project-specific rules and request only essential clarifications.
@@ -56,7 +56,7 @@ Return a concise baseline in Persian. Do not modify code, files, repository stat
 
 ## ۳. نصب به‌عنوان Skill در محیط‌های دارای پشتیبانی
 
-ساختار پوشه `operation-workflow` با قالب Agent Skills هماهنگ است: فایل `SKILL.md` دارای YAML frontmatter و ارجاع‌های نسبی به فایل‌های همراه است. بسته مستقل `operation-workflow-v1.0.zip` فقط همین پوشه و منابع لازم را دارد. برای نصب واقعی، تمام پوشه را حفظ کن؛ `SKILL.md` به‌تنهایی بسته کامل نیست. این Skill هیچ اسکریپت اجرایی، dependency یا مجوز از پیش داده‌شده‌ای ندارد.
+ساختار پوشه `operation-workflow` با قالب Agent Skills هماهنگ است: فایل `SKILL.md` دارای YAML frontmatter و ارجاع‌های نسبی به فایل‌های همراه است. بسته مستقل `operation-workflow-v1.1.0.zip` فقط همین پوشه و منابع لازم را دارد. برای نصب واقعی، تمام پوشه را حفظ کن؛ `SKILL.md` به‌تنهایی بسته کامل نیست. این Skill هیچ اسکریپت اجرایی، dependency یا مجوز از پیش داده‌شده‌ای ندارد.
 
 در نسخه‌های ChatGPT که قابلیت ایجاد و نصب Skill را دارند، طبق راهنمای رسمی از Plugins → Skills → Create → Upload from your computer استفاده کن و بسته Skill را وارد کن. پشتیبانی و مجوز نصب به حساب، محیط کاری و تنظیمات آن وابسته است. اگر این گزینه را نداری، از روش Project در بخش قبل استفاده کن. نصب یا آپلود این فایل‌ها خودبه‌خود دسترسی به GitHub، VS Code، فایل‌های محلی یا سرور را ایجاد نمی‌کند؛ اتصال و مجوز هر ابزار مستقل است. این بسته تولید شده است، نه اینکه از طرف کاربر نصب یا فعال شده باشد.
 
@@ -70,9 +70,9 @@ Return a concise baseline in Persian. Do not modify code, files, repository stat
 | ---: | ---: | ---: |
 | اولویت، محدوده و معیار پذیرش | مالک + Operation | تعریف یا انتخاب کار |
 | تصمیم‌های ضروری، فایل‌های مرتبط و ریسک‌ها | Operation | تحلیل |
-| تسک انگلیسی دقیق، مدل و Reasoning مناسب، Continue یا New، حدود مجوز Git | Operation | واگذاری |
-| تغییر محدود، تست معتبر و گزارش انگلیسی | Codex یا عامل توسعه | توسعه و تست |
-| بررسی Diff واقعی، CI، ریسک‌های باقی‌مانده و تصمیم درباره آمادگی | Operation | بازبینی مستقل |
+| انتخاب اجرای مستقیم، ترکیبی یا واگذاری؛ در صورت واگذاری، تسک انگلیسی دقیق، مدل و Reasoning و Continue یا New | Operation | انتخاب مسیر اجرا |
+| تغییر محدود، تست معتبر و شواهد یا گزارش انگلیسی | Operation یا عامل توسعه | توسعه و تست |
+| بررسی Diff واقعی، CI و ریسک‌ها؛ حفظ استقلال بازبینی طبق Core | Operation و بازبین مستقل در صورت الزام | بازبینی |
 | شواهد ادغام و انتشار، آزمون محیطی و تأیید انسانی در صورت نیاز | طبق مجوز پروژه | Merge/Deployment و پذیرش |
 | اصلاح مستندات و وضعیت واقعی؛ تعیین کار بعدی بدون اجرای خودکار کار جدید | Operation | ثبت پیشرفت |
 
@@ -100,6 +100,12 @@ Return a concise baseline in Persian. Do not modify code, files, repository stat
 - هر اصلاح اساسی قواعد عمومی ابتدا در Core با نسخه مشخص ثبت شود؛ Skill و قالب Profile تنها در صورت نیاز هماهنگ شوند. تصمیم خاص یک پروژه در Profile یا ADR همان پروژه باقی بماند.
 - پیشرفت را از روی شواهد معتبر و با معیارهای ثابت به‌روز کن. پیاده‌سازی محلی، Commit، Push، CI، Merge، Deployment و پذیرش واقعی وضعیت‌های متفاوت‌اند. یک فایل جاری و آرشیو مشخص برای گزارش‌های قدیمی کافی است.
 - فایل Core و Skill را یک نسخه هماهنگ نگه دار. Profile و Handoff را سبک و به‌روز نگه دار، نه نسخه کامل همه اسناد. Secret، Token یا محتویات `.env` را در بسته، Profile یا پرامپت نگذار.
+
+### بازخورد تجربی OWP
+
+اگر درخواست مالک با روال OWP تعارض معناداری داشته باشد یا اتلاف اعتبار، تحلیل تکراری، محدودیت ابزار یا فرصت بهبود مشاهده شود، Operation می‌تواند طبق Core §9 گزارش کوتاه و ناشناس تهیه کند. گزارش فقط سناریوی عمومی، مشاهده، پیشنهاد و اثر مستند یا برآورد مشخص را شامل می‌شود؛ نام و اطلاعات پروژه، شناسه‌ها، کد، لاگ و داده محرمانه در آن قرار نمی‌گیرد.
+
+Operation صریحاً اعلام می‌کند که اطلاعات اختصاصی پروژه در گزارش حذف شده و هیچ گزارشی یا اطلاعات پروژه‌ای را به‌صورت خودکار برای نگه‌دارندگان OWP ارسال نمی‌کند. ارسال کاملاً اختیاری است: مالک می‌تواند متن را بررسی، اصلاح، رد یا شخصاً در [GitHub Issues](https://github.com/kavehdd/OWP/issues) (فضای عمومی) ثبت کند. اگر ناشناس‌سازی مطمئن ممکن نباشد، گزارش قابل ارسال تهیه نمی‌شود. این فرایند نباید کار اصلی را متوقف کند.
 
 **نام فراخوانی قواعد:** OWP (Operation Workflow Protocol). وقتی در یک Project می‌گویی «طبق OWP عمل کن»، منظور Core نسخه تعیین‌شده به همراه Skill اجرایی و قواعد اختصاصی معتبر همان پروژه است.
 
