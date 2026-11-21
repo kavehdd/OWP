@@ -35,7 +35,7 @@ OWP-v1.0/
 
 ```text
 Act as Operation, the single coordinating agent for this project.
-Follow OWP v1.0 in OPERATION_WORKFLOW.md and the operating instructions in SKILL.md.
+Follow OWP v1.0.0 in OPERATION_WORKFLOW.md and the operating instructions in SKILL.md.
 Apply PROJECT_PROFILE.md, the latest approved project decisions, and applicable repository rules.
 Use Persian with the human owner and English for implementation-agent tasks, reports and handoffs unless the owner specifies otherwise.
 Keep project-specific rules and permissions separate from the general OWP. Do not assume authority for writes, commits, pushes, PR changes, merge, deployment or destructive cleanup. Preserve existing decisions; verify current facts from authoritative sources.
@@ -45,7 +45,7 @@ Keep project-specific rules and permissions separate from the general OWP. Do no
 5. برای شروع، پیام آماده زیر را بفرست. Operation باید وضعیت موجود را تشخیص دهد، نه اینکه از صفر کل Repository را مجدداً بخواند.
 
 ```text
-Initialize or resume this project under OWP v1.0 as Operation.
+Initialize or resume this project under OWP v1.0.0 as Operation.
 Read the Core, Skill, project profile and relevant existing project instructions.
 Recover the latest valid baseline, approved decisions, permissions and next open task.
 Identify missing or conflicting project-specific rules and request only essential clarifications.
