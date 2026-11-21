@@ -23,6 +23,7 @@ Copy this template into the individual project as `PROJECT_PROFILE.md`. Fill onl
 - Local test environment, isolated DB/services, CI checks and required target-engine tests:
 - Staging/production environments, access limits, release triggers, backups, rollback, migration and monitoring requirements:
 - Security, privacy, localization, performance, cost and platform constraints:
+- Direct, delegated or hybrid execution constraints; permitted environments and review requirements (if applicable):
 
 ## Authorization matrix
 
