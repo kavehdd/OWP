@@ -13,11 +13,11 @@
 
 ## معماری سه‌لایه
 
-| لایه | فایل | مسئولیت |
-|---|---|---|
-| Core | [OPERATION_WORKFLOW.md](operation-workflow/references/OPERATION_WORKFLOW.md) | مرجع عمومی، انگلیسی |
-| Skill | [SKILL.md](operation-workflow/SKILL.md) | روش اجرایی Operation، انگلیسی |
-| Project Profile | [PROJECT_PROFILE.template.md](operation-workflow/assets/PROJECT_PROFILE.template.md) | قالب تنظیمات و مجوزهای اختصاصی هر پروژه، انگلیسی |
+| مسئولیت | فایل | لایه |
+| ---: | ---: | ---: |
+| مرجع عمومی، انگلیسی | [OPERATION_WORKFLOW.md](operation-workflow/references/OPERATION_WORKFLOW.md) | Core |
+| روش اجرایی Operation، انگلیسی | [SKILL.md](operation-workflow/SKILL.md) | Skill |
+| قالب تنظیمات و مجوزهای اختصاصی هر پروژه، انگلیسی | [PROJECT_PROFILE.template.md](operation-workflow/assets/PROJECT_PROFILE.template.md) | Project Profile |
 
 مالک انسانی تصمیم‌ها و مجوزهای حساس را کنترل می‌کند؛ Operation تحلیل، طراحی، واگذاری و بازبینی را هماهنگ می‌کند؛ عامل توسعه پیاده‌سازی و تست را انجام می‌دهد. زبان پیش‌فرض ارتباط انسانی فارسی و زبان وظایف و گزارش‌های بین عامل‌ها انگلیسی است؛ در هر پروژه قابل تنظیم است. Skill مخصوص Operation است و به‌خودی‌خود هیچ مجوز ابزار یا دسترسی خارجی ایجاد نمی‌کند.
 
